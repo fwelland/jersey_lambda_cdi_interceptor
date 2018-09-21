@@ -1,0 +1,19 @@
+subprojects {	
+    repositories {
+      maven {
+        url pinAppsDepsRepo
+      }
+    }
+    
+    tasks.withType(JavaCompile) {
+        sourceCompatibility=1.8
+        targetCompatibility=1.8
+        options.compilerArgs << "-Xlint:unchecked" << "-Werror" << "-Xlint:deprecation"        
+    }
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '4.10'
+    distributionUrl = "https://artifactory.promnetwork.com/artifactory/pin-repository/gradle-${gradleVersion}-all.zip"
+}
+

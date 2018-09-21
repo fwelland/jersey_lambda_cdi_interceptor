@@ -1,0 +1,10 @@
+plugins{
+    id 'java'
+}
+
+dependencies {
+    compileOnly 'javax.enterprise:cdi-api:2.0'    
+    compile project(':contracts')
+    compile 'javax.transaction:javax.transaction-api:1.3'
+}
+

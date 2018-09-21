@@ -1,0 +1,10 @@
+plugins{
+    id 'java'
+}
+
+dependencies {
+    compileOnly 'javax.enterprise:cdi-api:2.0'    
+    compileOnly 'javax.ws.rs:javax.ws.rs-api:2.1'
+    
+    compile project(':contracts')
+}

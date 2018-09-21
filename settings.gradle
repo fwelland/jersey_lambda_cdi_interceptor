@@ -1,0 +1,2 @@
+include 'contracts', 'simpleservice','jax-rs', 'standalone', 'jersey_lambda'
+
