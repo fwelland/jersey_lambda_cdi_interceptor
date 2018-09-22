@@ -1,8 +1,6 @@
 subprojects {	
-    repositories {
-      maven {
-        url pinAppsDepsRepo
-      }
+    repositories{
+        jcenter()
     }
     
     tasks.withType(JavaCompile) {
@@ -14,6 +12,5 @@ subprojects {
 
 task wrapper(type: Wrapper) {
     gradleVersion = '4.10'
-    distributionUrl = "https://artifactory.promnetwork.com/artifactory/pin-repository/gradle-${gradleVersion}-all.zip"
 }
 
